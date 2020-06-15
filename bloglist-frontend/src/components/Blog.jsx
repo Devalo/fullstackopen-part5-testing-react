@@ -27,9 +27,9 @@ const Blog = ({ blog, updateVote, deleteBlog }) => {
 
   }
   return (
-    <div>
+    <div className="blogComp">
       <hr />
-      {blog.title}<button onClick={toggleVisibility}>{btnName}</button>
+      <h3>{blog.title}</h3><button onClick={toggleVisibility}>{btnName}</button>
       <div style={showWhenVisible}>
 
         <table>
@@ -40,7 +40,7 @@ const Blog = ({ blog, updateVote, deleteBlog }) => {
             </tr>
             <tr>
               <td>Likes:</td>
-              <td>{blog.likes} | <button onClick={voteUp}>Like</button></td>
+              <td>{blog.likes} | <button onClick={voteUp} className="likeBtn">Like</button></td>
             </tr>
             <tr>
               <td>Author:</td>
